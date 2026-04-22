@@ -77,32 +77,34 @@ function PopupGuide() {
         </div>
       </div>
 
-      {/* Block segmented tabs */}
-      <div style={{
-        display: 'flex', gap: 4, padding: 4,
-        background: '#FAFAFB', borderRadius: 10,
-        marginBottom: 16,
-      }}>
-        {['mobile', 'desktop'].map(t => (
-          <div
-            key={t}
-            onClick={() => setTab(t)}
-            style={{
-              flex: 1, padding: '7px 8px', borderRadius: 7,
-              background: tab === t ? 'rgba(23,102,214,0.12)' : 'transparent',
-              textAlign: 'center',
-              fontSize: 14, fontWeight: tab === t ? 700 : 500,
-              color: tab === t ? '#1766D6' : '#484E56',
-              cursor: 'pointer', transition: 'all 180ms ease',
-              letterSpacing: '-0.01em',
-            }}
-          >
-            {t === 'mobile' ? 'Mobile' : 'Desktop'}
-          </div>
-        ))}
+      {/* Dropdown selector */}
+      <div style={{ position: 'relative', marginBottom: 14 }}>
+        <select
+          value={tab}
+          onChange={e => setTab(e.target.value)}
+          style={{
+            width: '100%',
+            appearance: 'none', WebkitAppearance: 'none',
+            padding: '9px 36px 9px 12px',
+            borderRadius: 8, border: '1.5px solid #BFC2C4',
+            background: '#FFFFFF',
+            fontSize: 14, fontWeight: 600, color: '#131A25',
+            cursor: 'pointer', fontFamily: 'inherit', outline: 'none',
+          }}
+        >
+          <option value="mobile">Mobile</option>
+          <option value="desktop">Desktop</option>
+        </select>
+        <div style={{
+          position: 'absolute', right: 12, top: '50%', transform: 'translateY(-50%)',
+          pointerEvents: 'none',
+        }}>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2.5 4.5L6 8L9.5 4.5" stroke="#BFC2C4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
       </div>
 
-      {/* Static steps */}
       {tab === 'mobile' ? mobileContent : desktopContent}
 
     </div>
