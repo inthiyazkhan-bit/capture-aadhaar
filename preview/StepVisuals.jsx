@@ -64,8 +64,8 @@ function Step3Checklist() {
           borderRadius: 7,
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
           fontSize: 11, fontWeight: 600, color: '#131A25',
-          background: highlighted ? 'rgba(23,102,214,0.08)' : '#FFFFFF',
-          transition: 'all 175ms ease',
+          background: '#FFFFFF',
+          transition: 'border 175ms ease',
         }}>
           <span>Aadhaar Card</span>
           <div style={{ width: 12, height: 12, borderRadius: 3, border: '1.5px solid #BFC2C4' }}/>
