@@ -35,7 +35,7 @@ function PopupGuide() {
     ],
     macos: [
       step(1, 'Open Safari → Settings'),
-      step(2, 'Go to Websites tab'),
+      step(2, 'Go to website settings'),
       step(3, 'Pop-up Windows → Allow for this site'),
     ],
   };
