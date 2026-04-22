@@ -108,11 +108,10 @@ function Step3Select() {
 
         <div style={{
           padding: '8px 10px',
-          border: selected ? '2px solid #E23318' : '1.5px solid #BFC2C4',
+          border: selected ? '1.5px solid #1766D6' : '1.5px solid #BFC2C4',
           borderRadius: 7,
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
           fontSize: 11, fontWeight: 700, color: '#131A25',
-          animation: selected ? 'pulseRed 1.6s ease-in-out infinite' : 'none',
           transition: 'border 100ms ease',
         }}>
           <span>Aadhaar Card</span>
